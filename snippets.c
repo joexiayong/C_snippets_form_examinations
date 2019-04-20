@@ -172,6 +172,19 @@ void p32_26(){
 // 162:6: warning: assignment to 'int *' from incompatible pointer type 'int (*)[2][3]' [-Wincompatible-pointer-types]
 //      p=&a;
 }
+
+void p30_13(){
+    /*
+    原题目要求选出不合法的c语言常量
+    正确答案为 '\083' ，八进制中不能出现八
+    但是我选的是 '\' 这在程序中无论如何不能编译通过。
+    
+    */
+    const char a = '\n';
+    const char b = '\\';
+    const char c = '\073';
+    const char d = '\xcc';
+}
 int main()
 {
 
@@ -181,6 +194,8 @@ int main()
     //p20_47();
     // p15_24();
     // p33_34();
-    cmp_plus();
+    //cmp_plus();
+    p30_13();
+    printf("asd");
     return 0;
 }
