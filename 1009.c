@@ -33,11 +33,12 @@ int main()
         cnt++;
     }
     printf("%d\n",cnt);
-    for(int i =0;i<cnt;i++){ printf("%d",a[i]);if(i<cnt-1){
+    for(int i =cnt-1;i>=0;i--)
+    { printf("%d",a[i]);if(i>0){
             printf(" ");
         }}printf("\n");
     
-    for(int i =cnt-1;i>=0;i--){
+    for(int i =0;i<cnt;i++){
         printf("%d",a[i]);
         
     }
