@@ -25,22 +25,28 @@
 int main()
 {
     int num;
-    int a[5],cnt=0,re;
-    scanf("%d",&num);
-    while(num){
-        a[cnt]=num%10;
-        num/=10;
+    int a[5], cnt = 0, re;
+    scanf("%d", &num);
+    while (num)
+    {
+        a[cnt] = num % 10;
+        num /= 10;
         cnt++;
     }
-    printf("%d\n",cnt);
-    for(int i =cnt-1;i>=0;i--)
-    { printf("%d",a[i]);if(i>0){
+    printf("%d\n", cnt);
+    for (int i = cnt - 1; i >= 0; i--)
+    {
+        printf("%d", a[i]);
+        if (i > 0)
+        {
             printf(" ");
-        }}printf("\n");
-    
-    for(int i =0;i<cnt;i++){
-        printf("%d",a[i]);
-        
+        }
+    }
+    printf("\n");
+
+    for (int i = 0; i < cnt; i++)
+    {
+        printf("%d", a[i]);
     }
 
     return 0;

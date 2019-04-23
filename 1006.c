@@ -19,13 +19,17 @@ a b c其中最大的数
 */
 int main()
 {
-    int num[3]={0};
-    int i=0;
-    for(i=0;i<3;i++){
-    scanf("%d",&num[i]);
-        if(i>0 && num[i]<num[i-1]){num[i]=num[i-1];}
+    int num[3] = {0};
+    int i = 0;
+    for (i = 0; i < 3; i++)
+    {
+        scanf("%d", &num[i]);
+        if (i > 0 && num[i] < num[i - 1])
+        {
+            num[i] = num[i - 1];
+        }
     }
-    printf("%d",num[i-1]);
+    printf("%d", num[i - 1]);
 
     return 0;
 }

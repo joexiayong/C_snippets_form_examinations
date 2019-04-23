@@ -18,14 +18,19 @@ fedcba654321
 
 int main()
 {
-   char str[100];
-   int j = 0;
-   scanf("%s",str);
-   for(int i=99;i>=0;i--){
-       if(str[i] == '\0'){j=i-1;}
-   }
-   for(;j>=0;j--){
-       printf("%c",str[j]);
-   }
+    char str[100];
+    int j = 0;
+    scanf("%s", str);
+    for (int i = 99; i >= 0; i--)
+    {
+        if (str[i] == '\0')
+        {
+            j = i - 1;
+        }
+    }
+    for (; j >= 0; j--)
+    {
+        printf("%c", str[j]);
+    }
     return 0;
 }

@@ -23,8 +23,9 @@ float 要和 f 对应
 混着用计算结果会出错
 */
 #include <stdio.h>
-void main(){
+void main()
+{
     double F;
-    scanf("%lf",&F);
-    printf("c=%.2lf",5*(F-32)/9);
+    scanf("%lf", &F);
+    printf("c=%.2lf", 5 * (F - 32) / 9);
 }
