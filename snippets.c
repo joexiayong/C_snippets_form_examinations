@@ -186,6 +186,9 @@ void p30_13(){
     const char c = '\073';
     const char d = '\xcc';
 }
+               void null_(){
+               printf("gbs=%d\n",NULL);
+               }
 int main()
 {
 
