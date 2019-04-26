@@ -188,6 +188,8 @@ void p30_13(){
 }
                void null_(){
                printf("gbs=%d\n",NULL);
+               // 0;
+               // 小写的null会被编译器当成变量。产生错误
                }
 int main()
 {
