@@ -8,6 +8,7 @@ void p25_50()
     p = a[1];
 
     printf("%c,%s\n", *(p + 1), a[0]);
+    //u,mondy
 }
 void p25_49()
 {
