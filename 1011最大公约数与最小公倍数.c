@@ -35,3 +35,16 @@ int main()
 
     return 0;
 }
+/*
+#include<stdio.h>
+int main()
+{
+    int m,n,gbs,gys;
+    m=5;
+    n=10;
+    for(gbs=m;gbs%n!=0;gbs=gbs+m);
+    gys=m*n/gbs;
+    printf("gbs=%d\ngys=%d\n",gbs,gys);
+    return 0;
+}
+*/
