@@ -152,29 +152,30 @@ void cmp_plus()
         // while --k = 2
         // while --k = 1
     }
-    
 }
 
-void p32_26(){
-    int a[2][3],*p;
-    p=a;
-    p=a[1][2];
-    p=&a[1][2];
-    p=&a;
+void p32_26()
+{
+    int a[2][3], *p;
+    p = a;
+    p = a[1][2];
+    p = &a[1][2];
+    p = &a;
     // a为二维数组，需要使用行指针，
     // int (*p)[3] a[2][3]
     // p=a
-// 159:6: warning: assignment to 'int *' from incompatible pointer type 'int (*)[3]' [-Wincompatible-pointer-types]
-//      p=a;
-//       ^
-// 160:6: warning: assignment to 'int *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
-//      p=a[1][2];
-//       ^
-// 162:6: warning: assignment to 'int *' from incompatible pointer type 'int (*)[2][3]' [-Wincompatible-pointer-types]
-//      p=&a;
+    // 159:6: warning: assignment to 'int *' from incompatible pointer type 'int (*)[3]' [-Wincompatible-pointer-types]
+    //      p=a;
+    //       ^
+    // 160:6: warning: assignment to 'int *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
+    //      p=a[1][2];
+    //       ^
+    // 162:6: warning: assignment to 'int *' from incompatible pointer type 'int (*)[2][3]' [-Wincompatible-pointer-types]
+    //      p=&a;
 }
 
-void p30_13(){
+void p30_13()
+{
     /*
     原题目要求选出不合法的c语言常量
     正确答案为 '\083' ，八进制中不能出现八
@@ -186,11 +187,72 @@ void p30_13(){
     const char c = '\073';
     const char d = '\xcc';
 }
-               void null_(){
-               printf("gbs=%d\n",NULL);
-               // 0;
-               // 小写的null会被编译器当成变量。产生错误
-               }
+void null_()
+{
+    printf("gbs=%d\n", NULL);
+    // 0;
+    // 小写的null会被编译器当成变量。产生错误
+}
+
+void p44_35()
+{
+    struct st
+    {
+        int x;
+        int y;
+    } * ps;
+    int a[] = {1, 2};
+    int b[] = {3, 4};
+    struct st c[2] = {10, a, 15, b};
+    ps = c;
+    printf("%d", ++ps->x);
+    // 11 ++的优先级没有 -> 高
+    printf("%d", ps->x);
+    // 10
+    //printf("%d",*ps->y); 这个选项有语法错误
+    printf("%d", (ps++)->x);
+    // 10
+}
+void p43_29()
+{
+    char *a;
+    a = {"Chinese"};
+    // 无需括号
+    //     main.c:12:7: error: expected expression before ‘{’ token
+    //      a={"Chinese"};
+    //        ^
+    char *b;
+    b = "Chinese!";
+    //right
+    char c[10];
+    c = "Chinese!";
+    //error: assignment to expression with array type
+    //      c="Chinese!";
+    //       ^
+    char d[];
+    d = "Chinese!";
+    //error: array size missing in ‘d’
+    //          char d[];
+    //               ^
+    char c[10] = "Chinese!";
+    char d[] = "Chinese!";
+}
+void p43_29m()
+{
+    char *tmp = "Chinese!";
+    char *a;
+    a = tmp;
+    char *b;
+    b = tmp；
+    tmp = "USA";
+    printf("%s\n", a);
+    printf("%s\n", b);
+    //Chinese!
+    //Chinese!
+    /*
+    a 和 b 的值不会改变！！！
+    */
+}
 int main()
 {
 
