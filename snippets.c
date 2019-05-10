@@ -253,6 +253,12 @@ void p43_29m()
     a 和 b 的值不会改变！！！
     */
 }
+               viod string_pointer{
+                   char s[]="ABCD",*p;
+    for(p=s;p<s+4;p+=2)
+        printf("%c",*p);
+                   //abcdcd
+               }
 int main()
 {
 
