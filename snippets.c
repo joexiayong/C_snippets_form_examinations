@@ -259,6 +259,19 @@ void p43_29m()
         printf("%c",*p);
                    //abcdcd
                }
+void a(){
+int a=5,b=2,c=3,d=3,t;
+t=MAX(a+b,c+d)*10;
+//t=(a+b)>(c+d)?(a+b):(c+d)*10;
+printf("%d\n",t);
+// 7
+}
+               void b(){
+                   //输入“1234567890”
+                   //ch = 1
+                       
+               char ch;
+while((ch=getchar()) == '0') printf("#");}
 int main()
 {
 
