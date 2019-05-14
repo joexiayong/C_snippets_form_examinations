@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #define PI 3.14);
-
+#define MAX(a,b) (a)>(b)?(a):(b)
 void p25_50()
 {
     char *a[] = {"mondy", "tuesday", "wendesday"}, *p;
@@ -213,38 +213,38 @@ void p44_35()
     printf("%d", (ps++)->x);
     // 10
 }
-void p43_29()
-{
-    char *a;
-    a = {"Chinese"};
-    // 无需括号
-    //     main.c:12:7: error: expected expression before ‘{’ token
-    //      a={"Chinese"};
-    //        ^
-    char *b;
-    b = "Chinese!";
-    //right
-    char c[10];
-    c = "Chinese!";
-    //error: assignment to expression with array type
-    //      c="Chinese!";
-    //       ^
-    char d[];
-    d = "Chinese!";
-    //error: array size missing in ‘d’
-    //          char d[];
-    //               ^
-    char c[10] = "Chinese!";
-    char d[] = "Chinese!";
-}
+// void p43_29()
+// {
+//     char *a;
+//     a = {"Chinese"};
+//     // 无需括号
+//     //     main.c:12:7: error: expected expression before ‘{’ token
+//     //      a={"Chinese"};
+//     //        ^
+//     char *b;
+//     b = "Chinese!";
+//     //right
+//     char c[10];
+//     c = "Chinese!";
+//     //error: assignment to expression with array type
+//     //      c="Chinese!";
+//     //       ^
+//     char d[];
+//     d = "Chinese!";
+//     //error: array size missing in ‘d’
+//     //          char d[];
+//     //               ^
+//     char c[10] = "Chinese!";
+//     char d[] = "Chinese!";
+// }
 void p43_29m()
 {
     char *tmp = "Chinese!";
     char *a;
     a = tmp;
     char *b;
-    b = tmp；
-    tmp = "USA";
+    b = tmp;
+        tmp = "USA";
     printf("%s\n", a);
     printf("%s\n", b);
     //Chinese!
@@ -253,25 +253,31 @@ void p43_29m()
     a 和 b 的值不会改变！！！
     */
 }
-               viod string_pointer{
-                   char s[]="ABCD",*p;
-    for(p=s;p<s+4;p+=2)
-        printf("%c",*p);
-                   //abcdcd
-               }
-void a(){
-int a=5,b=2,c=3,d=3,t;
-t=MAX(a+b,c+d)*10;
-//t=(a+b)>(c+d)?(a+b):(c+d)*10;
-printf("%d\n",t);
-// 7
+void string_pointer()
+{
+    char s[] = "ABCD", *p;
+    for (p = s; p < s + 4; p += 2)
+        printf("%c", *p);
+    //abcdcd
 }
-               void b(){
-                   //输入“1234567890”
-                   //ch = 1
-                       
-               char ch;
-while((ch=getchar()) == '0') printf("#");}
+void a()
+{
+    // #define MAX(a,b) (a)>(b)?(a):(b)
+    int a = 5, b = 2, c = 3, d = 3, t;
+    t = MAX(a + b, c + d) * 10;
+    //t=(a+b)>(c+d)?(a+b):(c+d)*10;
+    printf("%d\n", t);
+    // 7
+}
+void b()
+{
+    //输入“1234567890”
+    //ch = 1
+
+    char ch;
+    while ((ch = getchar()) == '0')
+        printf("#");
+}
 int main()
 {
 
