@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #define PI 3.14);
-#define MAX(a,b) (a)>(b)?(a):(b)
+#define MAX(a, b) (a) > (b) ? (a) : (b)
 void p25_50()
 {
     char *a[] = {"mondy", "tuesday", "wendesday"}, *p;
@@ -244,7 +244,7 @@ void p43_29m()
     a = tmp;
     char *b;
     b = tmp;
-        tmp = "USA";
+    tmp = "USA";
     printf("%s\n", a);
     printf("%s\n", b);
     //Chinese!
@@ -278,6 +278,15 @@ void b()
     while ((ch = getchar()) == '0')
         printf("#");
 }
+void char_p(){
+    char *f(char *str){
+        return str="fun";
+    }
+    char *str="one";
+    printf("%s,%c\n",f(str)+1,*f(str)+1);
+    
+
+}
 int main()
 {
 
@@ -288,7 +297,6 @@ int main()
     // p15_24();
     // p33_34();
     //cmp_plus();
-    p30_13();
-    printf("asd");
+char_p();
     return 0;
 }
