@@ -287,6 +287,17 @@ void char_p(){
     
 
 }
+
+void pointer(){
+    int *a,*b,*c;
+    int d=2;
+    a=b=c=&d;
+    a=0;
+    *b=1;
+    *c=2;
+    a=b;
+    printf("%d,%d,%d\n",*a,*b,*c);
+}
 int main()
 {
 
@@ -297,6 +308,5 @@ int main()
     // p15_24();
     // p33_34();
     //cmp_plus();
-char_p();
     return 0;
 }
