@@ -56,3 +56,56 @@ int main(){
     }
     return 0;
 }
+#include <stdio.h>
+#include<string.h>
+
+
+int main()
+{
+    int j=0;
+    char  *a[5]={"123","456","789","899","345"};
+    int i=1;
+    for(;i<5;i++){
+        if(strcmp(a[j],a[i])<0){
+            j=i;
+        }
+    }
+    printf("%s",a[j]);
+    return 0;
+}
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+    typedef struct linked_node{
+        int a;
+        struct linked_node *next;
+    } node;
+    node *head = (node*)malloc(sizeof(node));
+    node *q= (node*)malloc(sizeof(node));
+    node *r= (node*)malloc(sizeof(node));
+    node *end = (node*)malloc(sizeof(node));
+    head-> a=1;
+    head->next=q;
+    q-> a=2;
+    q->next = r;
+    r-> a=3;
+    r->next=end;
+    end-> a=4;
+    end->next=NULL;
+    head->next=q;
+
+    printf("%d",q->a);
+
+
+
+    return 0;
+}
