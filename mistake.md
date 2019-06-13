@@ -91,3 +91,28 @@ if(++a||++b&&++c)
 
 ####  scanf遇到空白字符截止，为输入一行可使用 scanf("[^\n]",str) 或gets()。
 
+### 字符串逆序
+```c
+
+char* Reverse(char* s)
+{
+    // p指向字符串头部
+    char* p = s ;
+
+    // q指向字符串尾部
+    char* q = s ;
+    while( *q )
+        ++q ;
+    q -- ;
+
+    // 交换并移动指针，直到p和q交叉
+    while(q > p)
+    {
+        char t = *p ;
+        *p++ = *q ;
+        *q-- = t ;
+    }
+
+    return s ;
+}
+```
